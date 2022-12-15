@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proggress Bar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            color: white;
+            font-size: 20px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: cornflowerblue;
+        }
+        .progressArea{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        progress{
+           height: 50px;
+           width: 100%;
+        }
+        .proggressDiv{
+            text-align: center;
+            width: 50%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .prog-btn{
+            padding: 10px 40px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        .clickCount{
+            background-color: white;
+            color: cornflowerblue;
+            padding: 8px 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="proggressDiv">
+            <label for="file">Downloading progress:</label>
+            <progress id="file" value="0" max="100"> 32% </progress>
+            <span class="progressSituation"></span>
+        </div>
+        <div class="progressArea">
+            <button class="prog-btn">Run</button>
+        <span class="clickCount">0</span>
+        </div>
+    </div>
+    <script src="./JS/app.js"></script>
+</body>
+</html>
